@@ -1,0 +1,38 @@
+{
+  "name": "vue-oidc-provider",
+  "version": "0.0.0",
+  "description": "OpenID Connect & OAuth2 authentication using vue provider api as state management",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "vue-oidc-provider",
+    "authentication",
+    "oauth2",
+    "oidc",
+    "openid",
+    "OpenID Connect",
+    "react-provider"
+  ],
+  "author": "",
+  "peerDependencies": {
+    "oidc-client-ts": "^2.0.0",
+    "vue": ">=3.0.0"
+  },
+  "devDependencies": {
+    "oidc-client-ts": "^2.0.5",
+    "prettier": "^2.7.1",
+    "vue": "^3.2.37"
+  },
+  "engines": {
+    "node": ">=14.18"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  }
+}
