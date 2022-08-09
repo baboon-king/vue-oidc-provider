@@ -8,6 +8,7 @@
   ],
   "main": "./dist/vue-oidc-provider.umd.js",
   "module": "./dist/vue-oidc-provider.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vue-oidc-provider.js",
