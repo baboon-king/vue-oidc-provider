@@ -1,6 +1,6 @@
 {
   "name": "vue-oidc-provider",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "OpenID Connect & OAuth2 authentication using vue provider api as state management",
   "type": "module",
   "files": [
