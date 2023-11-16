@@ -6,6 +6,7 @@
   "files": [
     "dist"
   ],
+  "packageManager": "pnpm@8.10.5",
   "main": "./dist/vue-oidc-provider.umd.js",
   "module": "./dist/vue-oidc-provider.js",
   "types": "./dist/index.d.ts",
@@ -17,7 +18,6 @@
     }
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "format": "prettier --write .",
     "build": "pnpm vite build",
     "prepack": "pnpm build",
@@ -53,11 +53,7 @@
     "vite-plugin-dts": "^1.4.1",
     "vue": "^3.2.37"
   },
-  "engines": {
-    "node": "^14.18.0 || >=16.0.0"
-  },
   "license": "MIT",
-  "packageManager": "pnpm@7.8.0",
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public"
