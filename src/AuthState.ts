@@ -1,5 +1,12 @@
 import type { User } from "oidc-client-ts";
-import { computed, provide, ref, unref, type InjectionKey } from "vue";
+import {
+  ComputedRef,
+  computed,
+  provide,
+  ref,
+  unref,
+  type InjectionKey,
+} from "vue";
 
 /**
  * The auth state which, when combined with the auth methods, make up the return object of the `useAuth` hook.
@@ -109,7 +116,15 @@ const reducer = (state: AuthState, action: Action): AuthState => {
 
 const state = ref(initialAuthState);
 
-export const stateComputedRefs = {
+export interface AuthStateComputedRefs {
+  readonly user: ComputedRef<AuthState["user"]>;
+  readonly isLoading: ComputedRef<AuthState["isLoading"]>;
+  readonly isAuthenticated: ComputedRef<AuthState["isAuthenticated"]>;
+  readonly activeNavigator: ComputedRef<AuthState["activeNavigator"]>;
+  readonly error: ComputedRef<AuthState["error"]>;
+}
+
+export const stateComputedRefs: AuthStateComputedRefs = {
   user: computed(() => state.value.user),
   isLoading: computed(() => state.value.isLoading),
   isAuthenticated: computed(() => state.value.isAuthenticated),
@@ -124,8 +139,6 @@ export const useAuthStateReducer = () => {
 
   return [stateComputedRefs, dispatch] as const;
 };
-
-export type AuthStateComputedRefs = typeof stateComputedRefs;
 
 export const auth_state_key: InjectionKey<AuthStateComputedRefs> = Symbol();
 
