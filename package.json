@@ -12,6 +12,7 @@
   "exports": {
     ".": {
       "import": "./dist/vue-oidc-provider.js",
+      "types": "./dist/index.d.ts",
       "require": "./dist/vue-oidc-provider.umd.js"
     }
   },
